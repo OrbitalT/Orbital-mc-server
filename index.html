@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Home</title>
+</head>
+
+<body>
+  <div id="parent">
+    <form id="form">
+      <div>
+        <label>Make Server</label>
+        <br>
+        <input type="text" id="item" autofocus>
+      </div>
+      <button type="submit" class="button">Create</button>
+      <button class="button" onclick="document.getElementById('item').value = ''">Clear</button>
+    </form>
+  </div>
+
+  <script>
+    const electron = require('electron');
+    const {ipcRenderer} = electron;
+
+    const form = document.querySelector('form');
+    form.addEventListener('submit', submitFormp3);
+
+    function submitFormp3(e) {
+      e.preventDefault();
+      const item = document.querySelector('#item').value;
+      ipcRenderer.send('item:mp3', item);
+    }
+  </script>
+
+</body>
+
+</html>
