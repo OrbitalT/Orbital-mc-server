@@ -3,6 +3,7 @@ const url = require('url');
 const path = require('path');
 var cmd = require('node-command-line'),
   Promise = require('bluebird');
+var fs = require('fs');
 
 // Enable live reload for all the files inside your project directory
 require('electron-reload')(__dirname, {
@@ -47,10 +48,13 @@ app.on('ready', function() {
   Menu.setApplicationMenu(mainMenu);
 });
 
-//installing server files
+//installing server files version 1.14.4 and making data file
 ipcMain.on('item:mp3', function(e, item) {
   Promise.coroutine(function *() {
-    yield cmd.run('start cmd /k cd D:/All code etc/Orbital-mc-server/servers');
+    const direct = 'D:\\code\\ORbital-mc-server\\servers\\1.14.4\\' +item;
+    yield cmd.run('mkdir ' +direct);
+//    yield cmd.run('java -jar "D:\\code\\Orbital-mc-server\\jar\\1.14.4.jar" --installServer=' +direct);
+    fs.writeFileSync(direct + '\\data.txt', item + '\n1.14.4');
   })();
 });
 
