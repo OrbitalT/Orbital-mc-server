@@ -5,3 +5,5 @@ java -jar "D:/All code etc/Orbital-mc-server/jar/1.12.2.jar" --installServer=/D:
 java -jar "D:/code/Orbital-mc-server/jar/1.14.4.jar" --installServer=/D:/code/Orbital-mc-server/servers/1.14.4
 
 mkdir D:\code\Orbital-mc-server\servers\1.14.4\new & java -jar "D:\code\Orbital-mc-server\jar\1.14.4.jar" --installServer=D:\code\Orbital-mc-server\servers\1.14.4\new
+
+fs.writeFileSync(direct + '\\data.txt', item + '\n1.14.4');

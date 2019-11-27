@@ -51,10 +51,12 @@ app.on('ready', function() {
 //installing server files version 1.14.4 and making data file
 ipcMain.on('item:mp3', function(e, item) {
   Promise.coroutine(function *() {
-    const direct = 'D:\\code\\ORbital-mc-server\\servers\\1.14.4\\' +item;
+    const direct = 'servers\\1.14.4\\' +item;
     yield cmd.run('mkdir ' +direct);
-//    yield cmd.run('java -jar "D:\\code\\Orbital-mc-server\\jar\\1.14.4.jar" --installServer=' +direct);
-    fs.writeFileSync(direct + '\\data.txt', item + '\n1.14.4');
+//    yield cmd.run('java -jar 1.14.4.jar --installServer=' +direct);
+    fs.writeFileSync(direct + '\\data.txt', item);
+    fs.writeFileSync('data.json', '\n' + item)
+//    fs.writeFileSync(, item)
   })();
 });
 
