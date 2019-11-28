@@ -7,3 +7,21 @@ java -jar "D:/code/Orbital-mc-server/jar/1.14.4.jar" --installServer=/D:/code/Or
 mkdir D:\code\Orbital-mc-server\servers\1.14.4\new & java -jar "D:\code\Orbital-mc-server\jar\1.14.4.jar" --installServer=D:\code\Orbital-mc-server\servers\1.14.4\new
 
 fs.writeFileSync(direct + '\\data.txt', item + '\n1.14.4');
+
+<div class="cards-list">
+  <div class="card 1">
+    <div class="card_image"> <img src="https://i.redd.it/b3esnz5ra34y.jpg" /> </div>
+    <div class="card_title title-white">
+      <p id="demo"></p>
+    </div>
+  </div>
+</div>
+
+var fs = require('fs');
+
+var serfiles = fs.readdir('servers\\1.14.4\\', (err, files) => {
+  files.forEach(serfiles => {
+    console.log(serfiles + ' yes');
+    document.getElementById("demo").innerHTML = serfiles;
+  });
+});
