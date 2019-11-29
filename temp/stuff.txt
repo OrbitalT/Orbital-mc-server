@@ -25,3 +25,7 @@ var serfiles = fs.readdir('servers\\1.14.4\\', (err, files) => {
     document.getElementById("demo").innerHTML = serfiles;
   });
 });
+
+files.forEach(file => {
+
+});

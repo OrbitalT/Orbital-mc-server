@@ -55,7 +55,7 @@ ipcMain.on('item:mp3', function(e, item) {
     yield cmd.run('mkdir ' +direct);
 //    yield cmd.run('java -jar 1.14.4.jar --installServer=' +direct);
     fs.writeFileSync(direct + '\\data.txt', item);
-    fs.writeFileSync('data.json', '\n' + item)
+    fs.writeFileSync('src/data.js', '\n' + item)
 //    fs.writeFileSync(, item)
   })();
 });

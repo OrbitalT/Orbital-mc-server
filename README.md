@@ -3,10 +3,10 @@
 
 Wish there was a way to make mc server setup easy and to have them all available to run at the touch of a button? Well now you can, built from my sweat and tears.
 
-##Todo
+## Todo
 
-- [ ] Edit server settings
 - [ ] Start / Stop Server
+- [ ] Edit server settings
 - [x] List files
 - [x] Create files
 - [x] UI
@@ -17,8 +17,6 @@ Wish there was a way to make mc server setup easy and to have them all available
     * Work in progress
 
 ## Meta
-
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 

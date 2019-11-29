@@ -1,23 +1,20 @@
 // data.js
 const data = [{
-    id: 1,
     name: "test1"
+    //location: "D:\\code\\Orbital-mc-server\\servers\\1.14.4\\test1"
+    //version: "1.14.4"
+    //status: "running"
   },
   {
-    id: 2,
     name: "test2"
+    //version: "1.14.4"
+    //status: "stopped"
   },
   {
-    id: 3,
     name: "test3"
-  },  {
-      id: 4,
-      name: "test4"
-    },
-    {
-      id: 5,
-      name: "test5"
-    }
+    //version: "1.14.4"
+    //status: "running"
+  }
 ];
 
 export default data;

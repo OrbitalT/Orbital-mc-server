@@ -12,15 +12,18 @@ const buildcard = servercard => {
   const divName = document.createElement('div');
   const img = document.createElement('img');
   const p = document.createElement('p');
+  const a = document.createElement("a");
   // Append newly created elements into the DOM
-  divList.append(divCard);
+  divList.append(a);
+  a.append(divCard);
   divCard.append(divImg);
-  divImg.append(img);
   divCard.append(divName);
+  divImg.append(img);
   divName.append(p);
   // Set content and attributes
   divList.setAttribute('class', 'cards-list');
   divCard.setAttribute('class', 'card 1');
+  a.setAttribute('onclick', "document.getElementById('edit').style.display='block'");
   divImg.setAttribute('class', 'card_image');
   divName.setAttribute('class', 'card_title title-white');
   p.innerHTML = servercard.name;
