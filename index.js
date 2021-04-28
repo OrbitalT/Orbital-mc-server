@@ -23,14 +23,7 @@ let mainWindow;
 // ready
 app.on('ready', function() {
   // Create new main window
-  mainWindow = new BrowserWindow({
-    webPreferences: {
-      nodeIntegration: true
-    },
-
-    width: 1250,
-    height: 750
-  });
+  mainWindow = new BrowserWindow({webPreferences: {nodeIntegration: true},width: 1250,height: 750});
   //Load html
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, 'index.html'),
